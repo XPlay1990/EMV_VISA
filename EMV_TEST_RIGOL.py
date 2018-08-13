@@ -75,19 +75,3 @@ finally:
 # clean up
     turnoff()
     exit()
-
-
-def withSuffix(double count):
-    if (count < 1000) {
-        return "" + count;
-    }
-    exp = (int)(Math.log(count) / Math.log(1000));
-    return String.format("%.3f %c",
-        count / Math.pow(1000, exp),
-        "kMGTPE".charAt((int)(exp - 1)));
-    
-
-
-
-
-
