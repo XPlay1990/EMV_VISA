@@ -23,7 +23,10 @@ def initTCPIPServer():
     TCP_IP = '127.0.0.1'
     TCP_PORT = 1882
     BUFFER_SIZE = 1024
-    m_TCPIP_Connection.connect((TCP_IP, TCP_PORT))
+    try:
+        m_TCPIP_Connection.connect((TCP_IP, TCP_PORT))
+    except Exception as e:
+        print(e)
     print("Init TCP-IP:")
 
 
